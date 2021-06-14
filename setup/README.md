@@ -1,6 +1,12 @@
 # main.go
 Main of the Go program for parsing and integrating the data from the coastlines and Google Maps Elevation API.
 
+# cln
+One of my Go packages that contains collections. The only collection used in this project is ```TimeQueue```, which is used to ensure that requests are not being sent too fast too the Google Maps Elevation API, since it has a query frequency limit.
+
+# util
+Another one of my Go packages, that has various utility functions. The only file used in this project is ```util/util.go```.
+
 # coasts
 Go package containing the code that parses and integrates that data of world coastlines and elevations.
 Uses the Go package ```go-shp``` for the parsing ESRI Shapefiles in ```coastlines```.
