@@ -3,8 +3,8 @@
 Web app for climate change that will show the coasts in the world that would be submerged if global average ocean levels or temperature were to rise by a certain amount.
 
 # setup
-Golang code for parsing coast line data and integrating it with elevation data fetched from Google Maps Elevation API.
-Would not run right now because is not in proper Go directory structure.
+Golang code for parsing world coastline data and integrating it with elevation data fetched from Google Maps Elevation API, along with the coastline data itself.
+Go program would not run right now because is not in proper Go directory structure.
 
 # Google API Key
 All instances of ```<API_KEY>``` in this repo must be replaced with your API key if you intend to run the code locally.
