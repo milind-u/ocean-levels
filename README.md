@@ -3,7 +3,7 @@
 Web app for climate change that will show the coasts in the world that would be submerged if global average ocean levels or temperature were to rise by a certain amount.
 
 # www
-Files for the webapp
+Files for the webapp. If you intended to run this locally, you would have to change the path of ```elevations.json``` in ```www/index.html```
 
 # setup
 Golang code for parsing world coastline data and integrating it with elevation data fetched from Google Maps Elevation API, along with the coastline data itself.
