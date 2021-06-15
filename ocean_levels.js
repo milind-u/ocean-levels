@@ -2,7 +2,7 @@
 
 // There are too many elevation points so will only add every ELEVATION_INCR points
 const ELEVATION_INCR = 50;
-const ELEVATIONS_URL = "setup/elevations.json";
+const ELEVATIONS_PATH = "setup/elevations.json";
 const CIRCLE_COLOR = "#0000FF";
 // Value of a change of one degree Celsius in Fahrenheit.
 const C_TO_F = 9.0 / 5;
@@ -37,7 +37,7 @@ function initYearInput() {
 }
 
 function fetchElevations() {
-  $.getJSON(ELEVATIONS_URL, json => {
+  $.getJSON(ELEVATIONS_PATH, json => {
     elevations = Array.from(json);
     console.log(elevations.length, " elevations");
     if (map != null) {
