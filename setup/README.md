@@ -20,4 +20,4 @@ Dataset containing the coordinates of all the coastlines in the world,
 obtained from <a href="http://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/" target="_blank">Natural Earth</a>
 
 # Running the program
-If you intend to run this setup program, you would have to move the directories ```coasts```, ```util```, and ```cln``` to ```$GOPATH/src```, and you would have to run the command ```go get github.com/jonas-p/go-shp``` to install the shapefile parsing library.
+If you intend to run this setup program, you would have to move the directories ```coasts```, ```util```, and ```cln``` to ```$GOPATH/src```, and you would have to run the command ```go get github.com/jonas-p/go-shp``` to install the shapefile parsing library. You would also have to replace ```<API_KEY>``` in ```coasts/elevations.go``` with you Google Cloud Platform API Key that has Google Maps Elevation API enabled.
