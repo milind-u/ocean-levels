@@ -2,7 +2,7 @@
 
 // There are too many elevation points so will only add every ELEVATION_INCR points
 const ELEVATION_INCR = 50;
-const ELEVATIONS_URL = "../elevations.json";
+const ELEVATIONS_URL = "elevations.json";
 const CIRCLE_COLOR = "#0000FF";
 // Value of a change of one degree Celsius in Fahrenheit.
 const C_TO_F = 9.0 / 5;
