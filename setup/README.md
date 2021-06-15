@@ -10,7 +10,6 @@ Another one of my Go packages, that has various utility functions. The only file
 # coasts
 Go package containing the code that parses and integrates that data of world coastlines and elevations.
 Uses the Go package ```go-shp``` for the parsing ESRI Shapefiles in ```coastlines```.
-If you intend to run this code, you must run the command ```go get github.com/jonas-p/go-shp```
 
 # elevations.json
 The integrated data of coordinates for world coastlines, and their elevations.<br>
@@ -19,3 +18,6 @@ Ouput of the Go program.
 # coastlines
 Dataset containing the coordinates of all the coastlines in the world, 
 obtained from <a href="http://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/" target="_blank">Natural Earth</a>
+
+# Running the program
+If you intend to run this setup program, you would have to move the directories ```coasts```, ```util```, and ```cln``` to ```$GOPATH/src```, and you would have to run the command ```go get github.com/jonas-p/go-shp``` to install the shapefile parsing library.
