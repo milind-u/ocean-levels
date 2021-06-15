@@ -11,4 +11,5 @@ Go program would not run right now because is not in proper Go directory structu
 
 # Google API Key
 All instances of ```<API_KEY>``` in this repo must be replaced with your API key if you intend to run the code locally.
-To get one, you must create a Google Cloud Project and enable billing and the necessary APIs (Google Maps JavaScript and Elevation), and then create an API Key in the Credentials section.
+To get one, you must create a Google Cloud Project and enable billing and the necessary APIs (Google Maps JavaScript and Elevation), and then create an API Key in the Credentials section.<br>
+```<API_KEY``` shows up in ```www/index.html``` and ```setup/coasts/elevations.go```
