@@ -1,0 +1,91 @@
+body {
+  background-color: #F0F8FF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 2vw;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 5px;
+  margin-top: 0;
+  text-align: center;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: navy;
+}
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  background-color: #555555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 0.5vw;
+  background-color: #333333;
+}
+
+::-webkit-scrollbar-thumb:active {
+  border-radius: 0.5vw;
+  background-color: #1f1f1f;
+}
+
+#intro {
+  margin: auto;
+  font-size: xx-large;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+#map {
+  height: 70vh;
+  width: 99vw;
+  margin: auto;
+}
+
+#legend {
+  background: floralwhite;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid black;
+  font-size: 30px;
+  border-radius: 5%;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+input {
+  padding: 7px 0;
+  width: 2vw;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}

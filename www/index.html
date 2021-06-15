@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ocean Levels</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="ocean_levels.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="icon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ocean_levels.css">
+
+    <base target="_blank">
+  </head>
+  <body onload="initYearInput()">
+    <h1>Ocean Levels</h1>
+    <div id="intro">
+      Global warming is causing sea levels to rise because of
+      ice caps melting and oceans expanding.<br><br>
+      Enter a value for a change in temperature and for a certain year, to see which coasts would
+      be submerged under water if the average global temperature rose by that value by that year.
+    </div>
+    <label style="zoom:200%">
+      If the global average temperature rose by
+      <input id="delta_t_celsius" type="number" value="0" min="0" step="0.5"
+             onchange="displaySubmergedLocations(Input.DELTA_T_CELSIUS)">
+      &#8451;
+      , or
+      <input id="delta_t_fahrenheit" type="number" value="0" min="0" step="0.5"
+             onchange="displaySubmergedLocations(Input.DELTA_T_FAHRENHEIT)">
+      &#8457;
+      by the year <input id="year" type="number" step="1"
+                         onchange="displaySubmergedLocations(Input.YEAR)">,<br>
+      the global average sea level would rise by <b><span id="delta_sea_level">0</span> meters</b>,
+      and the following coasts would be submerged underwater:
+    </label>
+    <br>
+    <br>
+    <br>
+    <div id="map"></div>
+    <div id="legend" style="visibility: hidden">
+      <h3>Legend</h3>
+      <span class="dot"></span>
+      <span>
+        Edge of coast &nbsp;&emsp;&ensp; would be &nbsp;&emsp;&ensp; &nbsp;&emsp;&ensp; submerged under  &nbsp;&emsp;&ensp;
+        water by <span id="legend_year"></span> &nbsp;&emsp;&ensp; with this increase &nbsp;&emsp;&ensp; in temperature.
+      </span>
+    </div>
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE3qrrLS0u42-WcqGwSrCMKt0KQ9GKibs&callback=initMap">
+    </script>
+    <br>
+    <br>
+    <br>
+    <div style="zoom:150%">
+      Sources:<br>
+      &bull;&nbsp; Coordinates of coasts:
+      <a href="http://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/">Natural Earth</a><br>
+      &bull;&nbsp; Golang ESRI Shapefile Parsing Library:
+      <a href="https://pkg.go.dev/github.com/jonas-p/go-shp">go-shp</a><br>
+      &bull;&nbsp; Elevation data:
+      <a href="https://developers.google.com/maps/documentation/elevation/overview">Google Maps Elevation API</a><br>
+      &bull;&nbsp; Interactive world map:
+      <a href="https://developers.google.com/maps/documentation/javascript/overview">Google Maps JavaScript API</a><br>
+      &bull;&nbsp; Function for global mean sea level rise in terms of temperature change:
+      <a href="http://www.roperld.com/science/sealevelvstemperature.htm">L. David Roper</a>
+    </div>
+  </body>
+</html>
