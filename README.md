@@ -2,7 +2,7 @@
 
 Web app for climate change that will show the coasts in the world that would be submerged if global average ocean levels or temperature were to rise by a certain amount.
 
-You can view the webapp at https://storage.googleapis.com/html_files_bucket/OceanLevels/index.html
+You can view the webapp at https://oceanlevels.mdup.dev/
 
 # *.html, *.js, *.css, icon.jpg
 Files for the webapp. If you intended to run this locally, you would have to change the path of ```elevations.json``` in ```index.html```
