@@ -40,7 +40,6 @@ function initYearInput() {
 function fetchElevations() {
   $.getJSON(ELEVATIONS_PATH, json => {
     elevations = Array.from(json);
-    console.log(elevations.length, " elevations");
     if (map != null) {
       addCircles();
     }
@@ -82,7 +81,6 @@ function addCircles() {
 function displaySubmergedLocations(input) {
   const result = roundInputToPrecision(input);
 
-  console.log(input);
   let year, deltaSeaLevel, deltaT, deltaF;
   if (input === Input.YEAR) {
     deltaT = roundInputToPrecision(Input.DELTA_T_CELSIUS);
