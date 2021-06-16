@@ -31,7 +31,7 @@ fetchElevations();
 
 function initYearInput() {
   const year = document.getElementById(Input.YEAR);
-  year.min = CURRENT_YEAR + 1;
+  year.min = CURRENT_YEAR + 2;
   year.value = CURRENT_YEAR + 10;
   document.getElementById("legend_year").innerHTML = year.value;
 }
@@ -93,7 +93,7 @@ function displaySubmergedLocations(input) {
     deltaT = result;
     deltaF = deltaTToDeltaF(deltaT);
   }
-  year = Math.max(parseInt(document.getElementById(Input.YEAR).value), CURRENT_YEAR + 1);
+  year = Math.max(parseInt(document.getElementById(Input.YEAR).value), CURRENT_YEAR + 2);
   deltaSeaLevel = getDeltaSeaLevel(deltaT, year);
 
   deltaSeaLevel = roundToPrecision(deltaSeaLevel);
