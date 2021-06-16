@@ -9,6 +9,7 @@ const C_TO_F = 9.0 / 5;
 // Number of significant figures for floats
 const FLOAT_PRECISION = 4;
 const CURRENT_YEAR = new Date().getFullYear();
+const MIN_YEAR = CURRENT_YEAR + 1;
 // Start year of the sea level rise function
 const START_YEAR = 2010;
 //  Equilibrium time lag for sea level rise function
@@ -20,8 +21,8 @@ const EQ_TIME_LAG = 500;
  */
 const Input = Object.freeze({
   YEAR: "year",
-  DELTA_T_FAHRENHEIT: "delta_t_fahrenheit",
-  DELTA_T_CELSIUS: "delta_t_celsius"
+  DELTA_T_FAHRENHEIT: "delta-t-fahrenheit",
+  DELTA_T_CELSIUS: "delta-t-celsius"
 });
 
 let map = null;
@@ -31,9 +32,9 @@ fetchElevations();
 
 function initYearInput() {
   const year = document.getElementById(Input.YEAR);
-  year.min = CURRENT_YEAR + 2;
+  year.min = MIN_YEAR;
   year.value = CURRENT_YEAR + 10;
-  document.getElementById("legend_year").innerHTML = year.value;
+  document.getElementById("legend-year").innerHTML = year.value;
 }
 
 function fetchElevations() {
@@ -93,7 +94,7 @@ function displaySubmergedLocations(input) {
     deltaT = result;
     deltaF = deltaTToDeltaF(deltaT);
   }
-  year = Math.max(parseInt(document.getElementById(Input.YEAR).value), CURRENT_YEAR + 2);
+  year = Math.max(parseInt(document.getElementById(Input.YEAR).value), MIN_YEAR);
   deltaSeaLevel = getDeltaSeaLevel(deltaT, year);
 
   deltaSeaLevel = roundToPrecision(deltaSeaLevel);
@@ -104,8 +105,8 @@ function displaySubmergedLocations(input) {
   document.getElementById(Input.DELTA_T_CELSIUS).value = deltaT;
   document.getElementById(Input.DELTA_T_FAHRENHEIT).value = deltaF;
 
-  document.getElementById("delta_sea_level").innerHTML = deltaSeaLevel;
-  document.getElementById("legend_year").innerHTML = year;
+  document.getElementById("delta-sea-level").innerHTML = deltaSeaLevel;
+  document.getElementById("legend-year").innerHTML = year;
 
   for (const location of locations) {
     displayLocationIfSubmerged(deltaSeaLevel, location);
@@ -153,7 +154,7 @@ function getDeltaSeaLevel(deltaT, year) {
 
   for (let i = CURRENT_YEAR - START_YEAR; i < years_since_start; i++) {
     deltaSeaLevel += deltaTI * ((0.54 * (deltaTI * deltaTI)) + (0.39 * deltaTI) + 7.7) *
-        Math.tanh((years_since_start - 1 - i) / (2 * EQ_TIME_LAG));
+        Math.tanh((years_since_start - i) / (2 * EQ_TIME_LAG));
   }
 
   return deltaSeaLevel;

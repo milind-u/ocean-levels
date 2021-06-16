@@ -50,11 +50,14 @@ a:hover {
   background-color: #1f1f1f;
 }
 
-#intro {
+:root {
+  --font-size: 1.2vw;
+}
+
+.text {
   margin: auto;
-  font-size: x-large;
-  width: 50%;
-  padding-bottom: 30px;
+  font-size: var(--font-size);
+  width: 70%;
 }
 
 #map {
@@ -72,6 +75,7 @@ a:hover {
   border: 3px solid black;
   font-size: 30px;
   border-radius: 5%;
+  zoom: 50%;
 }
 
 .dot {
@@ -84,7 +88,7 @@ a:hover {
 
 input {
   padding: 7px 0;
-  width: 3vw;
+  width: 5vw;
   text-align: center;
   border: 1px solid #bbb;
   border-radius: 4px;
