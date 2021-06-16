@@ -8,7 +8,7 @@ One of my Go packages that contains collections. The only collection used in thi
 Another one of my Go packages, that has various utility functions. The only file used in this project is ```util/util.go```.
 
 # coasts
-Go package containing the code that parses and integrates that data of world coastlines and elevations.
+Go package specific to this project containing the code that parses and integrates that data of world coastlines and elevations.
 Uses the Go package ```go-shp``` for the parsing ESRI Shapefiles in ```coastlines```.
 
 # elevations.json
