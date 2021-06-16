@@ -4,7 +4,7 @@ Web app for climate change that will show the coasts in the world that would be 
 
 You can view the webapp at https://oceanlevels.mdup.dev/
 
-# *.html, *.js, *.css, icon.jpg
+# index.html, ocean_levels.js, ocean_levels.css, icon.jpg
 Files for the webapp. 
 
 # setup
