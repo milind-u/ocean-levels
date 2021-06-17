@@ -1,6 +1,6 @@
 # ocean-levels
 
-Web app for climate change that will show the coasts in the world that would be submerged if global average ocean levels or temperature were to rise by a certain amount.
+Web app for climate change that will show the coasts in the world that would be submerged if the average global temperature were to rise by a certain amount.
 
 You can view the webapp at https://oceanlevels.mdup.dev/
 
