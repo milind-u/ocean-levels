@@ -92,6 +92,8 @@ function displaySubmergedLocations(input) {
     deltaT = result;
     deltaF = deltaTToDeltaF(deltaT);
   }
+  deltaT = Math.abs(deltaT);
+  deltaF = Math.abs(deltaF);
   year = Math.max(parseInt(document.getElementById(Input.YEAR).value), MIN_YEAR);
   deltaSeaLevel = getDeltaSeaLevel(deltaT, year);
 
